@@ -26,6 +26,8 @@ export default function Hero() {
             <br />
             BLEZARD
             <span className="text-[#E39B8C]">.</span>
+            <br />
+            VIOLIN
           </h1>
 
           {/* Subheading */}
