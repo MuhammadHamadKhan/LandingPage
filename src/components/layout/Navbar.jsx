@@ -3,7 +3,7 @@ import { Menu, X } from "lucide-react";
 import Button from "../ui/Button";
 import logo from "../../assets/logo.png";
 
-const navLinks = ["Home", "About", "Booking"];
+const navLinks = ["About", "Reviews", "Contact"];
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -28,7 +28,7 @@ export default function Navbar() {
 
     const targetId = link.toLowerCase();
 
-    if (targetId === "home") {
+    if (targetId === "about") {
       window.scrollTo({
         top: 0,
         behavior: "smooth",
@@ -54,7 +54,6 @@ export default function Navbar() {
       >
         <div className="max-w-[1600px] mx-auto flex items-center justify-between px-4 sm:px-6 md:px-10 py-4 sm:py-5">
           {/* Logo */}
-          {/* Logo */}
           <div className="shrink-0">
             <img
               src={logo}
@@ -73,7 +72,7 @@ export default function Navbar() {
                   e.preventDefault();
                   handleNavClick(link);
                 }}
-                className="hover:text-[#E39B8C] transition-colors cursor-pointer"
+                className="hover:text-[#D61F7F] transition-colors cursor-pointer"
               >
                 {link}
               </a>
@@ -82,12 +81,11 @@ export default function Navbar() {
 
           {/* Desktop buttons */}
           <div className="hidden lg:flex items-center gap-3">
-            <Button variant="secondary" className="cursor-pointer px-5 py-2.5">
+            <Button
+              variant="secondary"
+              className="cursor-pointer rounded px-3 py-4"
+            >
               Login
-            </Button>
-
-            <Button variant="primary" className="cursor-pointer px-5 py-2.5">
-              Register / Inquire
             </Button>
           </div>
 
@@ -184,9 +182,15 @@ export default function Navbar() {
                     Login
                   </Button>
 
-                  <Button variant="primary" className="w-full py-3.5">
-                    Register / Inquire
-                  </Button>
+                  <a
+                    href="https://interest.biancablezardviolin.co.uk/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    icon="→"
+                    className="text-center cursor-pointer w-full sm:w-auto text-sm py-3 px-7 font-medium tracking-[0.15em] uppercase bg-[#D61F7F]  text-white  transition-colors"
+                  >
+                    Register Interest
+                  </a>
                 </div>
               </div>
             </div>

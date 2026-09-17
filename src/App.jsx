@@ -1,9 +1,10 @@
 import { useEffect } from "react";
 import Navbar from "./components/layout/Navbar";
 import Hero from "./components/sections/Hero";
-import About from "./components/sections/About";
-import BookingCTA from "./components/sections/BookingCTA";
+
 import Footer from "./components/layout/Footer";
+import Reviews from "./components/sections/Reviews";
+import Contact from "./components/sections/Contact";
 
 export default function App() {
   // Fonts loaded once here at the App level (previously lived inside Navbar
@@ -24,8 +25,8 @@ export default function App() {
     <div style={{ fontFamily: "'Inter', sans-serif" }} className="min-h-screen">
       <Navbar />
       <Hero />
-      <About />
-      <BookingCTA />
+      <Reviews />
+      <Contact />
       <Footer />
     </div>
   );

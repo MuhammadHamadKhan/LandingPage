@@ -10,11 +10,9 @@ export default function Button({
     "inline-flex items-center justify-center gap-2 px-7 py-4 text-[11px] font-medium tracking-[0.15em] uppercase transition-colors";
 
   const variants = {
-    // Filled rose — main call-to-action (e.g. "Reserve Date", "Register / Inquire")
-    primary: "bg-[#E39B8C] text-white hover:bg-[#d98a7a]",
+    primary: "bg-[#D61F7F] text-white ",
     // White bg + dark outline — secondary action (e.g. "Login", "Listen Audio Samples")
-    secondary:
-      "bg-white border border-[#16181D] text-[#16181D] hover:bg-[#16181D] hover:text-white ",
+    secondary: "bg-white border border-[#D61F7F] text-[#D61F7F]  ",
     // Quiet outline — used on lighter/bordered contexts (e.g. "Listen Audio Samples")
     outline: "border border-[#E4E0D8] text-[#16181D] hover:border-[#16181D]",
   };
