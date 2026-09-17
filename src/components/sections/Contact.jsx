@@ -91,8 +91,6 @@ export default function Contact() {
             TikTok
           </a>
         </div>
-
-        <Divider className="max-w-4xl mx-auto my-8 sm:my-10 hidden md:flex " />
       </div>
     </section>
   );

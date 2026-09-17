@@ -40,10 +40,10 @@ export default function Hero() {
     <section
       id="about"
       style={{ fontFamily: "'Inter', sans-serif" }}
-      className="grid grid-cols-1 xl:grid-cols-[1.15fr_1fr] bg-black text-white xl:min-h-[calc(100vh-80px)]"
+      className="grid grid-cols-1 md:grid-cols-[1.15fr_1fr] bg-black text-white sm:min-h-[calc(100vh-80px)]"
     >
       {/* Left Column — Content */}
-      <div className="flex flex-col justify-between px-6 sm:px-12 md:px-20 py-12 sm:py-16 xl:py-20">
+      <div className="flex flex-col justify-between items-center px-6 sm:px-12 md:px-20 py-12 sm:py-16 xl:py-20">
         <div>
           {/* Main Headline */}
           <h1
@@ -116,11 +116,11 @@ export default function Hero() {
       </div>
 
       {/* Right Column — Full Bleed Image */}
-      <div className="relative h-[380px] sm:h-[440px] md:h-[480px] xl:h-[700px] bg-[#F1EDE6]">
+      <div className="relative h-[380px] sm:h-[440px] md:h-[700px] xl:h-[700px] bg-[#F1EDE6]">
         <img
           src={heroImage}
           alt="Bianca Blezard performing violin at an outdoor wedding ceremony"
-          className="w-full h-full object-cover object-top"
+          className="w-full h-full object-cover object-top sm:object-[center_18%] md:object-[center_15%] xl:object-top"
         />
         {/* Subtle photo gradient vignette on mobile bottom */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent xl:hidden" />
