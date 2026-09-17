@@ -15,13 +15,13 @@ const reviews = [
 
 function ReviewBubble({ quote }) {
   return (
-    <div className="flex-shrink-0 w-[280px] sm:w-[340px] bg-white border border-[#E4E0D8] rounded-2xl p-6 mx-3">
+    <div className="flex-shrink-0 w-[280px] sm:w-[340px] bg-white border border-[#E4E0D8] rounded-2xl xl:p-12 xl:text-5xl p-6 mx-3">
       <div className="flex gap-0.5 text-[#D61F7F] mb-4" aria-hidden="true">
         {"★★★★★"}
       </div>
       <p
         style={{ fontFamily: "'Bodoni Moda', serif" }}
-        className="italic text-[#16181D] text-lg leading-snug"
+        className="italic text-[#16181D] text-lg xl:text-xl leading-snug"
       >
         &ldquo;{quote}&rdquo;
       </p>
