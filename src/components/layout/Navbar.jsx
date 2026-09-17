@@ -198,7 +198,7 @@ export default function Navbar() {
                     icon="→"
                     className="text-center cursor-pointer w-full sm:w-auto text-sm py-3 px-7 font-medium tracking-[0.15em] uppercase bg-[#D61F7F]  text-white  transition-colors"
                   >
-                    Register Interest
+                    Register
                   </a>
                 </div>
               </div>
