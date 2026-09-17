@@ -81,12 +81,15 @@ export default function Navbar() {
 
           {/* Desktop buttons */}
           <div className="hidden lg:flex items-center gap-3">
-            <Button
-              variant="secondary"
-              className="cursor-pointer rounded px-3 py-4"
+            <a
+              href="https://customer.biancablezardviolin.co.uk/"
+              target="_blank"
+              rel="noopener noreferrer"
+              icon="→"
+              className="text-center cursor-pointer w-full sm:w-auto text-sm py-3 px-7 font-medium tracking-[0.15em] uppercase bg-white  text-[#D61F7F] border rounded  border-[#D61F7F] transition-colors"
             >
               Login
-            </Button>
+            </a>
           </div>
 
           {/* Mobile hamburger */}
