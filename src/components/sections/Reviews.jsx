@@ -1,5 +1,3 @@
-import Badge from "../ui/Badge";
-
 // Straight from the client's "Old Client Reviews" document — no names attached
 // in the source, so a star row is used instead of inventing attributions.
 const reviews = [
