@@ -63,7 +63,7 @@ export default function Hero() {
       className="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr]  bg-black text-white w-full lg:min-h-[600px] h-full overflow-hidden"
     >
       {/* Left Column — Content */}
-      <div className="flex flex-col justify-center xl:justify-start 2xl:justify-center  xl:pt-18 items-center px-6 sm:px-12 md:px-16 lg:px-12 xl:px-20 py-12 sm:py-4 lg:py-4 2xl:pb-42">
+      <div className="flex flex-col justify-center xl:justify-start 2xl:justify-center md:pt-8 xl:pt-18 items-center px-6 sm:px-12 md:px-16 lg:px-12 xl:px-20 py-12 sm:py-4 lg:py-4 2xl:pb-42">
         <div>
           {/* Main Headline */}
           <h1
