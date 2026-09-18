@@ -1,7 +1,9 @@
 import Divider from "../ui/Divider";
 import heroImage from "../../assets/bianca.jpeg";
 
-function TikTokIcon({ size = 16 }) {
+// White circle bg + black glyph, per client request (inverted from the
+// previous white-outline-on-transparent version)
+function TikTokIcon({ size = 18 }) {
   return (
     <svg
       width={size}
@@ -15,22 +17,40 @@ function TikTokIcon({ size = 16 }) {
   );
 }
 
-function InstagramIcon({ size = 16 }) {
+// Real Instagram gradient mark, pink/magenta-dominant per client request
+function InstagramLogo() {
   return (
-    <svg
-      width={size}
-      height={size}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-    >
-      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+    <svg width="100%" height="100%" viewBox="0 0 48 48" aria-hidden="true">
+      <defs>
+        <linearGradient id="igGradientHero" x1="0%" y1="100%" x2="100%" y2="0%">
+          <stop offset="0%" stopColor="#FED576" />
+          <stop offset="15%" stopColor="#F47133" />
+          <stop offset="35%" stopColor="#E1306C" />
+          <stop offset="60%" stopColor="#C13584" />
+          <stop offset="80%" stopColor="#962FBF" />
+          <stop offset="100%" stopColor="#833AB4" />
+        </linearGradient>
+      </defs>
+      <rect width="48" height="48" rx="12" fill="url(#igGradientHero)" />
+      <rect
+        x="13"
+        y="13"
+        width="22"
+        height="22"
+        rx="6"
+        fill="none"
+        stroke="white"
+        strokeWidth="2.2"
+      />
+      <circle
+        cx="24"
+        cy="24"
+        r="6"
+        fill="none"
+        stroke="white"
+        strokeWidth="2.2"
+      />
+      <circle cx="32.5" cy="15.5" r="1.6" fill="white" />
     </svg>
   );
 }
@@ -59,8 +79,10 @@ export default function Hero() {
 
           {/* Subheading */}
           <p className="mt-6 sm:mt-8 text-xs sm:text-sm lg:text-base xl:text-lg 3xl:text-xl font-medium tracking-[0.15em] uppercase  leading-relaxed">
-            Multi-award-winning wedding violinist. <br />
-            Based in the UK performing Worldwide
+            Multi-award-winning wedding violinist <br />
+            Based in the UK
+            <br />
+            performing Worldwide
           </p>
 
           {/* Hairline Divider */}
@@ -75,39 +97,42 @@ export default function Hero() {
           </p>
 
           {/* Single Primary CTA + Audio Text Link */}
-          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 mt-8 sm:mt-10">
+          <div className="flex flex-col sm:flex-row sm:flex-wrap items-start sm:items-center gap-4 sm:gap-6 mt-8 sm:mt-10">
             <a
               href="https://interest.biancablezardviolin.co.uk/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-center cursor-pointer w-full sm:w-auto text-sm lg:text-base 3xl:text-lg py-3 lg:py-3.5 px-7 lg:px-8 font-medium tracking-[0.15em] uppercase bg-[#D61F7F] hover:bg-[#b8186b] text-white transition-colors"
+              className="text-center cursor-pointer whitespace-nowrap w-full sm:w-auto rounded text-sm lg:text-base 3xl:text-lg py-3 lg:py-3.5 px-7 lg:px-8 font-medium tracking-[0.15em] uppercase bg-[#D61F7F] hover:bg-[#b8186b] text-white transition-colors"
             >
               Register Interest
             </a>
 
-            {/* Audio Link */}
-            <div className="flex items-center gap-3">
-              <span className="text-[11px] lg:text-xs xl:text-sm 3xl:text-lg  tracking-[0.15em] uppercase">
+            {/* Audio Link — styled like the Login button (white bg, pink text/border) */}
+            <div className="flex flex-wrap items-center gap-4">
+              <span className="text-center whitespace-nowrap text-xs sm:text-sm 3xl:text-base py-2.5 sm:py-3 px-5 sm:px-6 lg:py-3.5  font-medium tracking-[0.15em] uppercase bg-white text-[#D61F7F] border border-[#D61F7F] rounded">
                 Listen to me perform
               </span>
-              <a
-                href="https://www.instagram.com/biancablezardviolin"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-                className="w-9 h-9 lg:w-10 lg:h-10 xl:w-12 xl:h-12 2xl:w-14 2xl:h-14 flex items-center justify-center rounded-full border border-[#E4E0D8] hover:border-[#D61F7F] hover:text-[#D61F7F] transition-colors"
-              >
-                <InstagramIcon size={16} />
-              </a>
-              <a
-                href="https://www.tiktok.com/@biancablezardviolin?_t=8ivCYtkWnOC&_r=1"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="TikTok"
-                className="w-9 h-9 lg:w-10 lg:h-10 xl:w-12 xl:h-12 2xl:w-14 2xl:h-14 flex items-center justify-center rounded-full border border-[#E4E0D8] hover:border-[#D61F7F] hover:text-[#D61F7F] transition-colors"
-              >
-                <TikTokIcon size={16} />
-              </a>
+
+              <div className="flex items-center gap-3">
+                <a
+                  href="https://www.instagram.com/biancablezardviolin"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                  className="w-10 h-10 lg:w-11 lg:h-11 xl:w-12 xl:h-12 2xl:w-12 2xl:h-12 rounded-xl overflow-hidden transition-transform hover:scale-105 shrink-0"
+                >
+                  <InstagramLogo />
+                </a>
+                <a
+                  href="https://www.tiktok.com/@biancablezardviolin?_t=8ivCYtkWnOC&_r=1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="TikTok"
+                  className="w-10 h-10 lg:w-11 lg:h-11 xl:w-12 xl:h-12 text-black 2xl:w-12 2xl:h-12 rounded-full bg-white flex items-center justify-center transition-transform hover:scale-105 shrink-0"
+                >
+                  <TikTokIcon size={32} />
+                </a>
+              </div>
             </div>
           </div>
         </div>

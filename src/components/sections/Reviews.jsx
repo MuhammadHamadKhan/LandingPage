@@ -26,7 +26,7 @@ function ReviewBubble({ quote }) {
         style={{ fontFamily: "'Bodoni Moda', serif" }}
         className="italic text-[#16181D] text-base sm:text-lg leading-snug"
       >
-        &ldquo;{quote}&rdquo;
+        &ldquo; {quote} &rdquo;
       </p>
     </div>
   );
