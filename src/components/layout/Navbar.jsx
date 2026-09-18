@@ -52,18 +52,18 @@ export default function Navbar() {
         style={{ fontFamily: "'Inter', sans-serif" }}
         className="sticky top-0 z-50 w-full overflow-x-clip bg-white/80 backdrop-blur-md border-b border-[#E4E0D8]"
       >
-        <div className="max-w-[1600px] mx-auto flex items-center justify-between px-4 sm:px-6 md:px-10 py-4 sm:py-5">
+        <div className="max-w-[1600px] mx-auto flex items-center justify-between px-4 sm:px-6 md:px-10 lg:px-12 xl:px-16 2xl:px-20 py-4 sm:py-5 xl:py-6">
           {/* Logo */}
           <div className="shrink-0">
             <img
               src={logo}
               alt="Bianca Blezard"
-              className="h-12 sm:h-16 md:h-18 w-auto object-contain"
+              className="h-12 sm:h-16 md:h-18 xl:h-20 2xl:h-18  w-auto object-contain"
             />
           </div>
 
           {/* Desktop nav */}
-          <div className="hidden lg:flex items-center gap-8 text-[11px] font-medium tracking-[0.15em] uppercase text-[#16181D]">
+          <div className="hidden lg:flex items-center gap-8 xl:gap-10 2xl:gap-12 text-[11px] xl:text-xs 2xl:text-sm font-medium tracking-[0.15em] uppercase text-[#16181D]">
             {navLinks.map((link) => (
               <a
                 key={link}
@@ -86,7 +86,7 @@ export default function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
               icon="→"
-              className="text-center cursor-pointer w-full sm:w-auto text-sm py-3 px-7 font-medium tracking-[0.15em] uppercase bg-white  text-[#D61F7F] border rounded  border-[#D61F7F] transition-colors"
+              className="text-center cursor-pointer w-full sm:w-auto text-sm xl:text-base py-3 xl:py-3.5 px-7 xl:px-8 font-medium tracking-[0.15em] uppercase bg-white  text-[#D61F7F] border rounded  border-[#D61F7F] transition-colors"
             >
               Login
             </a>

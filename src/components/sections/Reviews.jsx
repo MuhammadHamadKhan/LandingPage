@@ -15,13 +15,16 @@ const reviews = [
 
 function ReviewBubble({ quote }) {
   return (
-    <div className="flex-shrink-0 w-[280px] sm:w-[340px] bg-white border border-[#E4E0D8] rounded-2xl xl:p-12 xl:text-5xl p-6 mx-3">
-      <div className="flex gap-0.5 text-[#D61F7F] mb-4" aria-hidden="true">
+    <div className="flex-shrink-0 w-[260px] sm:w-[320px] lg:w-[340px] xl:w-[360px] bg-white border border-[#E4E0D8] rounded-2xl p-6 sm:p-7 lg:p-8 mx-3">
+      <div
+        className="flex gap-0.5 text-[#D61F7F] text-base mb-4"
+        aria-hidden="true"
+      >
         {"★★★★★"}
       </div>
       <p
         style={{ fontFamily: "'Bodoni Moda', serif" }}
-        className="italic text-[#16181D] text-lg xl:text-xl leading-snug"
+        className="italic text-[#16181D] text-base sm:text-lg leading-snug"
       >
         &ldquo;{quote}&rdquo;
       </p>
@@ -39,7 +42,7 @@ export default function Reviews() {
     <section
       id="reviews"
       style={{ fontFamily: "'Inter', sans-serif" }}
-      className="bg-[] py-20 scroll-mt-24"
+      className=" py-20 scroll-mt-24"
     >
       <style>{`
         @keyframes reviews-marquee {

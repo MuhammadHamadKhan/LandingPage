@@ -40,15 +40,15 @@ export default function Hero() {
     <section
       id="about"
       style={{ fontFamily: "'Inter', sans-serif" }}
-      className="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr]  bg-black text-white w-full lg:min-h-[600px] lg:max-h-[85vh] xl:max-h-[800px] overflow-hidden"
+      className="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr]  bg-black text-white w-full lg:min-h-[600px] h-full overflow-hidden"
     >
       {/* Left Column — Content */}
-      <div className="flex flex-col justify-center xl:justify-start xl:pt-18 items-center px-6 sm:px-12 md:px-16 lg:px-12 xl:px-20 py-12 sm:py-4 lg:py-4">
+      <div className="flex flex-col justify-center xl:justify-start 2xl:justify-center  xl:pt-18 items-center px-6 sm:px-12 md:px-16 lg:px-12 xl:px-20 py-12 sm:py-4 lg:py-4 2xl:pb-42">
         <div>
           {/* Main Headline */}
           <h1
             style={{ fontFamily: "'Bodoni Moda', serif" }}
-            className="font-black leading-[0.92] text-[15vw] sm:text-[10vw] md:text-[7.5vw] lg:text-[5vw] xl:text-[4.25rem] tracking-tight"
+            className="font-black leading-[0.92] text-[15vw] sm:text-[10vw] md:text-[7.5vw] lg:text-[5vw] 3xl:text-[6.25rem] tracking-tight"
           >
             BIANCA
             <br />
@@ -58,7 +58,7 @@ export default function Hero() {
           </h1>
 
           {/* Subheading */}
-          <p className="mt-6 sm:mt-8 text-xs sm:text-sm font-medium tracking-[0.15em] uppercase max-w-md leading-relaxed">
+          <p className="mt-6 sm:mt-8 text-xs sm:text-sm lg:text-base xl:text-lg 3xl:text-xl font-medium tracking-[0.15em] uppercase  leading-relaxed">
             Multi-award-winning wedding violinist. <br />
             Based in the UK performing Worldwide
           </p>
@@ -67,7 +67,7 @@ export default function Hero() {
           <Divider className="max-w-md my-6 sm:my-8 border-[#E4E0D8]" />
 
           {/* Body Description */}
-          <p className="text-sm sm:text-base max-w-md leading-relaxed">
+          <p className="text-sm sm:text-base lg:text-xl 2xl:text-2xl max-w-md leading-relaxed">
             Thank you so much for visiting my page. If you have already booked
             with me, you can log into my customer portal here. If you would like
             to enquire about my services, please use the form linked below to
@@ -80,14 +80,14 @@ export default function Hero() {
               href="https://interest.biancablezardviolin.co.uk/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-center cursor-pointer w-full sm:w-auto text-sm py-3 px-7 font-medium tracking-[0.15em] uppercase bg-[#D61F7F] hover:bg-[#b8186b] text-white transition-colors"
+              className="text-center cursor-pointer w-full sm:w-auto text-sm lg:text-base 3xl:text-lg py-3 lg:py-3.5 px-7 lg:px-8 font-medium tracking-[0.15em] uppercase bg-[#D61F7F] hover:bg-[#b8186b] text-white transition-colors"
             >
               Register Interest
             </a>
 
             {/* Audio Link */}
             <div className="flex items-center gap-3">
-              <span className="text-[11px] font-medium tracking-[0.15em] uppercase">
+              <span className="text-[11px] lg:text-xs xl:text-sm 3xl:text-lg  tracking-[0.15em] uppercase">
                 Listen to me perform
               </span>
               <a
@@ -95,7 +95,7 @@ export default function Hero() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
-                className="w-9 h-9 flex items-center justify-center rounded-full border border-[#E4E0D8] hover:border-[#D61F7F] hover:text-[#D61F7F] transition-colors"
+                className="w-9 h-9 lg:w-10 lg:h-10 xl:w-12 xl:h-12 2xl:w-14 2xl:h-14 flex items-center justify-center rounded-full border border-[#E4E0D8] hover:border-[#D61F7F] hover:text-[#D61F7F] transition-colors"
               >
                 <InstagramIcon size={16} />
               </a>
@@ -104,7 +104,7 @@ export default function Hero() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="TikTok"
-                className="w-9 h-9 flex items-center justify-center rounded-full border border-[#E4E0D8] hover:border-[#D61F7F] hover:text-[#D61F7F] transition-colors"
+                className="w-9 h-9 lg:w-10 lg:h-10 xl:w-12 xl:h-12 2xl:w-14 2xl:h-14 flex items-center justify-center rounded-full border border-[#E4E0D8] hover:border-[#D61F7F] hover:text-[#D61F7F] transition-colors"
               >
                 <TikTokIcon size={16} />
               </a>
@@ -114,11 +114,11 @@ export default function Hero() {
       </div>
 
       {/* Right Column — Image */}
-      <div className="relative h-[380px] sm:h-[480px] lg:h-full w-full bg-[#F1EDE6] overflow-hidden">
+      <div className="relative h-[480px] sm:h-[600px] md:h-[680px] lg:h-full   w-full bg-[#F1EDE6] overflow-hidden">
         <img
           src={heroImage}
           alt="Bianca Blezard performing violin at an outdoor wedding ceremony"
-          className="w-full h-full object-cover object-top sm:object-[center_18%] md:object-[center_15%] xl:object-center"
+          className="w-full h-full object-cover object-center"
         />
       </div>
     </section>
