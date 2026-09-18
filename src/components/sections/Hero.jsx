@@ -68,7 +68,7 @@ export default function Hero() {
           {/* Main Headline */}
           <h1
             style={{ fontFamily: "'Bodoni Moda', serif" }}
-            className="font-black leading-[0.92] text-[15vw] sm:text-[10vw] md:text-[7.5vw] lg:text-[5vw] 3xl:text-[6.25rem] tracking-tight"
+            className="font-black leading-[0.92] lg:mt-2 text-[15vw] sm:text-[10vw] md:text-[7.5vw] lg:text-[5vw] 3xl:text-[6.25rem] tracking-tight"
           >
             BIANCA
             <br />
