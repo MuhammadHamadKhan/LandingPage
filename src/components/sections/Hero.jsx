@@ -143,7 +143,7 @@ export default function Hero() {
             </p>
 
             {/* Single Primary CTA + Audio Text Link */}
-            <div className="flex flex-col sm:flex-row items-center sm:items-center gap-4 sm:gap-6 mt-8 sm:mt-10">
+            <div className="flex flex-col sm:flex-row sm:flex-wrap items-center sm:items-center gap-4 sm:gap-6 mt-8 sm:mt-10">
               <a
                 href="https://interest.biancablezardviolin.co.uk/"
                 target="_blank"
@@ -155,7 +155,7 @@ export default function Hero() {
 
               {/* Audio Link */}
               <div className="flex flex-col  sm:flex-row items-center gap-2 sm:gap-3">
-                <span className="text-xs sm:text-sm 3xl:text-base font-medium tracking-[0.15em] uppercase text-white whitespace-nowrap">
+                <span className="text-xs sm:text-sm 3xl:text-base font-medium tracking-[0.15em] uppercase text-white/70 whitespace-nowrap">
                   Listen to me perform
                 </span>
 
@@ -178,7 +178,7 @@ export default function Hero() {
                     aria-label="TikTok"
                     className="w-10 h-10 lg:w-11 lg:h-11 xl:w-12 xl:h-12 text-black rounded-full bg-white flex items-center justify-center transition-transform hover:scale-105 shrink-0"
                   >
-                    <TikTokIcon size={28} />
+                    <TikTokIcon size={20} />
                   </a>
                 </div>
               </div>
@@ -187,7 +187,7 @@ export default function Hero() {
         </div>
 
         {/* Right Column — Image (Synchronized with content height) */}
-        <div className="relative w-full aspect-[4/5] sm:aspect-[3/4] md:aspect-auto md:h-[680px] lg:h-full  overflow-hidden">
+        <div className="relative w-full aspect-[4/5] sm:aspect-[3/4] md:aspect-auto md:h-[680px] lg:h-full bg-[#F1EDE6] overflow-hidden">
           <img
             src={heroImage}
             alt="Bianca Blezard performing violin at an outdoor wedding ceremony"
