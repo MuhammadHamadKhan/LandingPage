@@ -155,7 +155,7 @@ export default function Hero() {
 
               {/* Audio Link */}
               <div className="flex flex-col  sm:flex-row items-center gap-2 sm:gap-3">
-                <span className="text-xs sm:text-sm 3xl:text-base font-medium tracking-[0.15em] uppercase text-white/70 whitespace-nowrap">
+                <span className="text-xs sm:text-sm 3xl:text-base font-medium tracking-[0.15em] uppercase text-white whitespace-nowrap">
                   Listen to me perform
                 </span>
 
@@ -178,7 +178,7 @@ export default function Hero() {
                     aria-label="TikTok"
                     className="w-10 h-10 lg:w-11 lg:h-11 xl:w-12 xl:h-12 text-black rounded-full bg-white flex items-center justify-center transition-transform hover:scale-105 shrink-0"
                   >
-                    <TikTokIcon size={20} />
+                    <TikTokIcon size={24} />
                   </a>
                 </div>
               </div>
