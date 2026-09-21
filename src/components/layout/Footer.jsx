@@ -15,7 +15,7 @@ export default function Footer() {
             <img
               src={logo}
               alt="Bianca Blezard"
-              className=" h-14 sm:h-16 md:h-20 w-auto object-contain"
+              className=" h-12 sm:h-16 md:h-18 xl:h-20 2xl:h-22  w-auto object-contain"
             />
           </div>
 

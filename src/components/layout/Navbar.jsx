@@ -52,7 +52,7 @@ export default function Navbar() {
         style={{ fontFamily: "'Inter', sans-serif" }}
         className="sticky top-0 z-50 w-full overflow-x-clip bg-white/80 backdrop-blur-md border-b border-[#E4E0D8]"
       >
-        <div className="max-w-[1850px] mx-auto flex items-center justify-between px-4 sm:px-6 md:px-10 md:pl-18 lg:px-12 xl:px-16 2xl:px-20  py-4 sm:py-5 xl:py-6">
+        <div className="max-w-[1850px] mx-auto [@media(min-width:1200px)_and_(max-width:1500px)]:max-w-[1360px] flex items-center justify-between px-4 sm:px-6 md:px-10 md:pl-18 lg:px-12 xl:px-16 2xl:px-20  py-4 sm:py-5 xl:py-6">
           {/* Logo */}
           <div className="shrink-0">
             <img

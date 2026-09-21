@@ -1,8 +1,7 @@
 import Divider from "../ui/Divider";
 import heroImage from "../../assets/bianca.jpeg";
 
-// White circle bg + black glyph, per client request (inverted from the
-// previous white-outline-on-transparent version)
+// White circle bg + black glyph, per client request
 function TikTokIcon({ size = 18 }) {
   return (
     <svg
@@ -54,98 +53,148 @@ function InstagramLogo() {
     </svg>
   );
 }
+function ArrowIcon({ className = "" }) {
+  return (
+    <svg
+      width="28"
+      height="18"
+      viewBox="0 0 20 12"
+      fill="none"
+      aria-hidden="true"
+      className={className}
+    >
+      <path
+        d="M1 2L5 6L1 10"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="chevron-1"
+      />
+      <path
+        d="M7 2L11 6L7 10"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="chevron-2"
+      />
+      <path
+        d="M13 2L17 6L13 10"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="chevron-3"
+      />
+    </svg>
+  );
+}
 
 export default function Hero() {
   return (
-    <section
-      id="about"
-      style={{ fontFamily: "'Inter', sans-serif" }}
-      className="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr]  bg-black text-white w-full lg:min-h-[600px] h-full overflow-hidden"
-    >
-      {/* Left Column — Content */}
-      <div className="flex flex-col justify-center xl:justify-start 2xl:justify-center md:pt-8 xl:pt-18 items-center px-6 sm:px-12 md:px-16 lg:px-12 xl:px-20 py-12 sm:py-4 lg:py-4 2xl:pb-42">
-        <div>
-          {/* Main Headline */}
-          <h1
-            style={{ fontFamily: "'Bodoni Moda', serif" }}
-            className="font-black leading-[0.92] lg:mt-2 text-[15vw] sm:text-[10vw] md:text-[7.5vw] lg:text-[5vw] 3xl:text-[6.25rem] tracking-tight"
-          >
-            BIANCA
-            <br />
-            BLEZARD
-            <br />
-            VIOLIN
-          </h1>
-
-          {/* Subheading */}
-          <p className="mt-6 sm:mt-8 text-xs sm:text-sm lg:text-base xl:text-lg 3xl:text-xl font-medium tracking-[0.15em] uppercase  leading-relaxed">
-            Multi-award-winning wedding violinist <br />
-            Based in the UK
-            <br />
-            performing Worldwide
-          </p>
-
-          {/* Hairline Divider */}
-          <Divider className="max-w-md my-6 sm:my-8 border-[#E4E0D8]" />
-
-          {/* Body Description */}
-          <p className="text-sm sm:text-base lg:text-xl 2xl:text-2xl max-w-md leading-relaxed">
-            Thank you so much for visiting my page. If you have already booked
-            with me, you can log into my customer portal here. If you would like
-            to enquire about my services, please use the form linked below to
-            register your interest.
-          </p>
-
-          {/* Single Primary CTA + Audio Text Link */}
-          <div className="flex flex-col sm:flex-row sm:flex-wrap items-start sm:items-center gap-4 sm:gap-6 mt-8 sm:mt-10">
-            <a
-              href="https://interest.biancablezardviolin.co.uk/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-center cursor-pointer whitespace-nowrap w-full sm:w-auto rounded text-sm lg:text-base 3xl:text-lg py-3 lg:py-3.5 px-7 lg:px-8 font-medium tracking-[0.15em] uppercase bg-[#D61F7F] hover:bg-[#b8186b] text-white transition-colors"
+    <>
+      <style>{`
+  @keyframes chevron-flow {
+    0%, 100% { opacity: 0.15; }
+    50% { opacity: 1; }
+  }
+  .chevron-1 { animation: chevron-flow 1.5s ease-in-out infinite; }
+  .chevron-2 { animation: chevron-flow 1.5s ease-in-out infinite; animation-delay: 0.15s; }
+  .chevron-3 { animation: chevron-flow 1.5s ease-in-out infinite; animation-delay: 0.3s; }
+`}</style>
+      <section
+        id="about"
+        style={{ fontFamily: "'Inter', sans-serif" }}
+        className="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] bg-black text-white w-full overflow-hidden items-stretch"
+      >
+        {/* Left Column — Content */}
+        <div className="flex flex-col justify-center items-center px-6 sm:px-12 md:px-16 lg:px-12 xl:px-20 py-12 sm:py-16 lg:py-16">
+          <div>
+            {/* Main Headline */}
+            <h1
+              style={{ fontFamily: "'Bodoni Moda', serif" }}
+              className="font-black leading-[0.92] text-5xl sm:text-6xl md:text-7xl lg:text-6xl xl:text-8xl tracking-tight"
             >
-              Register Interest
-            </a>
+              BIANCA
+              <br />
+              BLEZARD
+              <br />
+              VIOLIN
+            </h1>
 
-            {/* Audio Link — styled like the Login button (white bg, pink text/border) */}
-            <div className="flex flex-wrap items-center gap-4">
-              <span className="text-center whitespace-nowrap text-xs sm:text-sm 3xl:text-base py-2.5 sm:py-3 px-5 sm:px-6 lg:py-3.5  font-medium tracking-[0.15em] uppercase bg-white text-[#D61F7F] border border-[#D61F7F] rounded">
-                Listen to me perform
-              </span>
+            {/* Subheading */}
+            <p className="mt-6 sm:mt-8 text-xs sm:text-sm lg:text-base xl:text-lg 3xl:text-xl font-medium tracking-[0.15em] uppercase leading-relaxed">
+              Multi-award-winning wedding violinist <br />
+              Based in the UK
+              <br />
+              performing Worldwide
+            </p>
 
-              <div className="flex items-center gap-3">
-                <a
-                  href="https://www.instagram.com/biancablezardviolin"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Instagram"
-                  className="w-10 h-10 lg:w-11 lg:h-11 xl:w-12 xl:h-12 2xl:w-12 2xl:h-12 rounded-xl overflow-hidden transition-transform hover:scale-105 shrink-0"
-                >
-                  <InstagramLogo />
-                </a>
-                <a
-                  href="https://www.tiktok.com/@biancablezardviolin?_t=8ivCYtkWnOC&_r=1"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="TikTok"
-                  className="w-10 h-10 lg:w-11 lg:h-11 xl:w-12 xl:h-12 text-black 2xl:w-12 2xl:h-12 rounded-full bg-white flex items-center justify-center transition-transform hover:scale-105 shrink-0"
-                >
-                  <TikTokIcon size={32} />
-                </a>
+            {/* Hairline Divider */}
+            <Divider className="max-w-md my-6 sm:my-8 border-[#E4E0D8]" />
+
+            {/* Body Description */}
+            <p className="text-sm sm:text-base lg:text-xl 2xl:text-2xl max-w-md leading-relaxed">
+              Thank you so much for visiting my page. If you have already booked
+              with me, you can log into my customer portal here. If you would
+              like to enquire about my services, please use the form linked
+              below to register your interest.
+            </p>
+
+            {/* Single Primary CTA + Audio Text Link */}
+            <div className="flex flex-col sm:flex-row sm:flex-wrap items-center sm:items-center gap-4 sm:gap-6 mt-8 sm:mt-10">
+              <a
+                href="https://interest.biancablezardviolin.co.uk/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-center cursor-pointer whitespace-nowrap w-full sm:w-auto rounded text-sm lg:text-base 3xl:text-lg py-3 lg:py-3.5 px-7 lg:px-8 font-medium tracking-[0.15em] uppercase bg-[#D61F7F] hover:bg-[#b8186b] text-white transition-colors"
+              >
+                Register Interest
+              </a>
+
+              {/* Audio Link */}
+              <div className="flex flex-col  sm:flex-row items-center gap-2 sm:gap-3">
+                <span className="text-xs sm:text-sm 3xl:text-base font-medium tracking-[0.15em] uppercase text-white whitespace-nowrap">
+                  Listen to me perform
+                </span>
+
+                <ArrowIcon className="rotate-90 sm:rotate-0 text-[#D61F7F] shrink-0" />
+
+                <div className="flex items-center gap-3">
+                  <a
+                    href="https://www.instagram.com/biancablezardviolin"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram"
+                    className="w-10 h-10 lg:w-11 lg:h-11 xl:w-12 xl:h-12 rounded-xl overflow-hidden transition-transform hover:scale-105 shrink-0"
+                  >
+                    <InstagramLogo />
+                  </a>
+                  <a
+                    href="https://www.tiktok.com/@biancablezardviolin?_t=8ivCYtkWnOC&_r=1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="TikTok"
+                    className="w-10 h-10 lg:w-11 lg:h-11 xl:w-12 xl:h-12 text-black rounded-full bg-white flex items-center justify-center transition-transform hover:scale-105 shrink-0"
+                  >
+                    <TikTokIcon size={24} />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Right Column — Image */}
-      <div className="relative h-[480px] sm:h-[600px] md:h-[680px] lg:h-full   w-full bg-[#F1EDE6] overflow-hidden">
-        <img
-          src={heroImage}
-          alt="Bianca Blezard performing violin at an outdoor wedding ceremony"
-          className="w-full h-full object-cover object-center"
-        />
-      </div>
-    </section>
+        {/* Right Column — Image (Synchronized with content height) */}
+        <div className="relative w-full aspect-[4/5] sm:aspect-[3/4] md:aspect-auto md:h-[680px] lg:h-full bg-[#F1EDE6] overflow-hidden">
+          <img
+            src={heroImage}
+            alt="Bianca Blezard performing violin at an outdoor wedding ceremony"
+            className="w-full h-full object-cover object-[center_12%]"
+          />
+        </div>
+      </section>
+    </>
   );
 }
