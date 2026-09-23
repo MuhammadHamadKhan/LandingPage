@@ -125,7 +125,7 @@ export default function Hero() {
 
             {/* Subheading */}
             {/* Tagline — now the visual focal point */}
-            <p className="mt-6 sm:mt-8 text-sm sm:text-base lg:text-xl xl:text-2xl 3xl:text-3xl font-semibold tracking-[0.12em] uppercase leading-snug text-white">
+            <p className="mt-6 sm:mt-8 text-xs sm:text-base lg:text-xl xl:text-2xl 3xl:text-xl font-medium tracking-[0.15em] uppercase leading-relaxed">
               Multi-award-winning wedding violinist <br />
               Based in the UK
               <br />
@@ -160,7 +160,7 @@ export default function Hero() {
                   <span className="text-sm lg:text-base 3xl:text-lg font-bold tracking-[0.25em] uppercase text-white whitespace-nowrap pb-1">
                     Listen to me perform
                   </span>
-                  <span className="h-[2px] w-full bg-gradient-to-r from-transparent via-[#D61F7F] to-transparent opacity-80"></span>
+                  <span className="h-[1px] w-full bg-gradient-to-r from-transparent via-[#D61F7F] to-transparent opacity-80"></span>
                 </div>
 
                 <ArrowIcon className="rotate-90 sm:rotate-0 text-[#D61F7F] shrink-0" />
