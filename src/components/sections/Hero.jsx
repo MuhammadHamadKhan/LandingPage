@@ -124,7 +124,8 @@ export default function Hero() {
             </h1>
 
             {/* Subheading */}
-            <p className="mt-6 sm:mt-8 text-xs sm:text-sm lg:text-base xl:text-lg 3xl:text-xl font-medium tracking-[0.15em] uppercase leading-relaxed">
+            {/* Tagline — now the visual focal point */}
+            <p className="mt-6 sm:mt-8 text-sm sm:text-base lg:text-xl xl:text-2xl 3xl:text-3xl font-semibold tracking-[0.12em] uppercase leading-snug text-white">
               Multi-award-winning wedding violinist <br />
               Based in the UK
               <br />
@@ -134,8 +135,8 @@ export default function Hero() {
             {/* Hairline Divider */}
             <Divider className="max-w-md my-6 sm:my-8 border-[#E4E0D8]" />
 
-            {/* Body Description */}
-            <p className="text-sm sm:text-base lg:text-xl 2xl:text-2xl max-w-md leading-relaxed">
+            {/* Body Description — now secondary/supporting, not competing */}
+            <p className="text-xs sm:text-sm lg:text-base 2xl:text-lg max-w-md leading-relaxed text-white">
               Thank you so much for visiting my page. If you have already booked
               with me, you can log into my customer portal here. If you would
               like to enquire about my services, please use the form linked
@@ -155,9 +156,12 @@ export default function Hero() {
 
               {/* Audio Link */}
               <div className="flex flex-col  sm:flex-row items-center gap-2 sm:gap-3">
-                <span className="text-xs sm:text-sm 3xl:text-base font-medium tracking-[0.15em] uppercase text-white whitespace-nowrap">
-                  Listen to me perform
-                </span>
+                <div className="inline-flex flex-col items-center">
+                  <span className="text-sm lg:text-base 3xl:text-lg font-bold tracking-[0.25em] uppercase text-white whitespace-nowrap pb-1">
+                    Listen to me perform
+                  </span>
+                  <span className="h-[2px] w-full bg-gradient-to-r from-transparent via-[#D61F7F] to-transparent opacity-80"></span>
+                </div>
 
                 <ArrowIcon className="rotate-90 sm:rotate-0 text-[#D61F7F] shrink-0" />
 
@@ -187,7 +191,7 @@ export default function Hero() {
         </div>
 
         {/* Right Column — Image (Synchronized with content height) */}
-        <div className="relative w-full aspect-[4/5] sm:aspect-[3/4] md:aspect-auto md:h-[680px] lg:h-full bg-[#F1EDE6] overflow-hidden">
+        <div className="relative w-full aspect-[4/5] sm:aspect-[3/4] md:aspect-auto md:h-[680px] lg:h-full  overflow-hidden">
           <img
             src={heroImage}
             alt="Bianca Blezard performing violin at an outdoor wedding ceremony"
